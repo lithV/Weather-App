@@ -42,6 +42,8 @@ document.querySelector(".error").style.display ="none";
 searchBtn.addEventListener("click",()=>{
     checkWeather(searchBox.value);
 })
-searchBox.addEventListener("keypress",()=>{
-    checkWeather(searchBox.value);
+searchBox.addEventListener("keydown",()=>{
+    if(event.key==="Enter" || "Space"){
+        checkWeather(searchBox.value);
+    }  
 })
